@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(15, 8, 38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+main {
+  max-width: 1140px;
+  width: 100%;
+  height: 95vh;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(51 51 51) !important;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: orange;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sub-title {
+  font-size: 27px;
+  color: chocolate;
+  margin-top: 20px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #6e6e6e;
+  margin: 5px 0 13px;
+}
+
+.form {
+  justify-content: space-between;
+  gap: 10px;
+}
+
+input {
+  height: 30px;
+  padding: 0 12px;
+  outline: none;
+}
+
+.form label {
+  color: #dadada;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.t-name {
+  flex: 1;
+}
+
+.t-name input {
+  flex-basis: 75%;
+}
+
+select {
+  height: 30px;
+}
+
+.t-submit .add-btn {
+  padding: 0 13px;
+  background-color: chocolate;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+/* SECOND AREA */
+
+.tools {
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+/* BULK CHECKBOX SELECTION  */
+#bulk-action {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: tomato;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+#action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#bulk-action #action-group button {
+  padding: 7px 11px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffffc4;
+}
+
+#action-group #bulk-priority,
+#bulk-status {
+  background-color: #ffffffc4;
+  border: none;
+  border-radius: 5px;
+}
+
+.modify-search {
+  padding: 0 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffffc4;
+}
+
+#edit-inp {
+  background-color: transparent;
+  border: none;
+}
+
+#edit-sel {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid;
+}
+
+button#dismiss {
+  border: none;
+  color: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 23px;
+  line-height: 30px;
+  cursor: pointer;
+  /* background-color: #ffffffc4; */
+  font-weight: 700;
+}
+
+/* THIRD AREA */
+
+table,
+thead,
+tbody,
+tr {
+  display: block;
+  width: 100%;
+}
+
+table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 5px; */
+}
+
+table tbody tr:hover {
+  background-color: #000;
+}
+
+table thead {
+  background-color: chocolate;
+  padding: 10px 0;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+table td,
+th {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tbody#tbody {
+  background-color: #484463;
+  border-radius: 5px;
+}
+
+tbody tr {
+  margin-bottom: 8px;
+}
+
+#action-btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+#action-btn .delete-icon {
+  color: red;
+}
+
+#action-btn .check-icon {
+  color: green;
+}
+
+#action-btn .edit-icon {
+  color: chocolate;
+}
+
+#action-btn i {
+  display: inline-block;
+  font-size: 25px;
+  pointer-events: none;
+  transition: transform ease-out 0.2s;
+  -webkit-transition: transform ease-out 0.2s;
+  -moz-transition: transform ease-out 0.2s;
+  -ms-transition: transform ease-out 0.2s;
+  -o-transition: transform ease-out 0.2s;
+}
+
+#action-btn button:hover i {
+  transform: scale(1.4);
+}
+
+.save-btn {
+  color: green;
+}
+
+#action-btn .hide {
+  display: none;
+}
+.show {
+  display: block;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My ToDo App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <!-- FIRST AREA -->
+        <h1>MY TO-DO LISTS</h1>
+        <h3 class="sub-title">New Task Creation</h3>
+        <div class="separator"></div>
+        <form class="form flex" id="form">
+          <div class="t-name flex">
+            <label for="name">Name :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Add a new task"
+            />
+          </div>
+          <div class="t-priority">
+            <label for="priority">Priority :</label>
+            <select name="priority" id="priority">
+              <option value="" disabled>Select one</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="t-date">
+            <label for="Date">Date :</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="t-submit">
+            <input type="submit" class="add-btn" value="Add Now" />
+          </div>
+        </form>
+        <!-- SECOND AREA -->
+        <h3 class="sub-title">Task Management</h3>
+        <div class="separator"></div>
+        <div class="tools flex">
+          <div class="search">
+            <label for="s-name">Search :</label>
+            <input type="text" id="s-name" placeholder="Search by name" />
+          </div>
+          <div class="filter">
+            <label for="filter">filter :</label>
+            <select name="filter" id="filter">
+              <option value="all">All</option>
+              <option value="completed">Complete</option>
+              <option value="incomplete">Incomplete</option>
+              <option value="today">Today</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+          <div class="sort">
+            <label for="filter">Sort :</label>
+            <select name="sort" id="sort">
+              <option value="newest">Random</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+            </select>
+          </div>
+          <div class="s-date">
+            <label for="s-date">By Date :</label>
+            <input type="date" name="s-date" id="by-date" />
+          </div>
+        </div>
+        <!-- BULK CHECKBOX SELECTION -->
+        <div id="bulk-action">
+          <div id="action-group">
+            <button id="bulk-delete">Delete</button>
+            <select name="priority" id="bulk-priority">
+              <option disabled selected>Change Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+
+            <select name="status" id="bulk-status">
+              <option disabled selected>Change Status</option>
+              <option value="completed">Completed</option>
+              <option value="incomplete">Incomplete</option>
+            </select>
+
+            <div class="modify-search">
+              <input type="text" placeholder="Modify the name" id="edit-inp" />
+              <select id="edit-sel">
+                <option value="name">Name</option>
+                <option value="date">Date</option>
+              </select>
+            </div>
+          </div>
+          <button id="dismiss">X</button>
+        </div>
+        <!-- THIRD AREA -->
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" name="checkbox" id="all-select" /><label
+                  for="all-select"
+                  >All</label
+                >
+              </th>
+              <th>No.</th>
+              <th>Task Name</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
